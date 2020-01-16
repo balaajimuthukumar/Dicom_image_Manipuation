@@ -1,0 +1,7 @@
+import _io
+my_val = open(r"C:\Users\mbala\Desktop\test_image_1.jpg","rb+")
+new_val = _io.BufferedRandom.read1(my_val)
+my_val.close()
+my_val = open(r"C:\Users\mbala\Desktop\test.txt","w+")
+my_val.write(str(new_val))
+my_val.close()
