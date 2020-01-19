@@ -9,7 +9,7 @@ import _io
 list_file = open("C:/Users/mbala/Desktop/test.txt","rb+")
 myvalue = _io.BufferedRandom.read(list_file)
 #myvalue = _io.TextIOWrapper.read(list_file)
-
+new_data = []
 #value = "hello, balaaji, how are you?"
 for i,k in enumerate(myvalue):
     #print(i,k)
@@ -18,10 +18,25 @@ for i,k in enumerate(myvalue):
     valuez = myvalue[myval]
     try:
       print(int(valuez[i]))
+      new_data[i] = valuez[i]
     except IndexError:
        list_file.close()
        print("i value: ", i)
        break
   
+    
+"""new_file = open("C:/Users/mbala/Desktop/test_file.txt","a+")
+for i,k in enumerate(myvalue):
+    #print(i,k)
+    #print(str_obj.index('\ba'))
+    myval = slice(1,len(myvalue),1)
+    valuez = myvalue[myval]
+    try:
+        new_file.write(str(int(valuez[i])))
+    except IndexError:
+       new_file.close()
+       print("i value: ", i)
+       break"""
+       
 print("the end") 
 
